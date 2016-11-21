@@ -16,16 +16,6 @@
   with_items: "{{ packages_to_upgrade }}"
   when: packages_to_upgrade|length > 0
 
-- name: Upgrade non aarch64 packages
-  apt:
-    name: "{{ item }}"
-    state: latest
-    force: yes
-  with_items: "{{ non_aarch64_packages_to_upgrade }}"
-  when:
-    non_aarch64_packages_to_upgrade|length > 0 and
-    ansible_architecture != "aarch64"
-
 - name: Install packages
   apt:
     name: "{{ item }}"
@@ -34,11 +24,3 @@
   with_items: "{{ packages|list + common_packages|list }}"
   when: packages|length > 0 or
         common_packages|length > 0
-
-- name: Install non aarch64 packages
-  apt:
-    name: "{{ item }}"
-    state: present
-    force: yes
-  with_items: "{{ non_aarch64_packages|list + non_aarch64_common_packages|list }}"
-  when: ansible_architecture != "aarch64"
