@@ -1,4 +1,6 @@
 ---
+- debug: msg="roles/testnode/tasks/apt_systems.yml ansible_pkg_mgr is {{ ansible_pkg_mgr }}"
+
 # Starting with ubuntu 15.04 we no longer maintain our own package mirrors.
 # For anything ubuntu < 15.04 or debian <=7 we still do.
 - name: Setup local repo files.

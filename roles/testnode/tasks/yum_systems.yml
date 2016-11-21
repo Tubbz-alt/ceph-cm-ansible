@@ -1,4 +1,6 @@
 ---
+- debug: msg="roles/testnode/tasks/yum_systems.yml ansible_pkg_mgr is {{ ansible_pkg_mgr }}"
+
 # Tasks common to all systems that use the yum
 # package manager
 

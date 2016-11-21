@@ -1,4 +1,6 @@
 ---
+- debug: msg="roles/testnode/tasks/main.yml ansible_pkg_mgr is {{ ansible_pkg_mgr }}"
+
 # loading vars
 - include: vars.yml
   tags:
