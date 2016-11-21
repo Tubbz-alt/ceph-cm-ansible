@@ -22,8 +22,8 @@ ceph_packages_to_remove:
   - python-cephfs
   - librbd1
   - librados2
-  - mod_fastcgi
-  - iozone
+  #- mod_fastcgi
+  #- iozone
 
 ceph_dependency_packages_to_remove:
   - boost-random

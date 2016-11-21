@@ -32,7 +32,7 @@ packages:
   - valgrind
   - python-nose
   - ant
-  - iozone
+  #- iozone
   ###
   # used by the xfstests tasks
   - libtool
@@ -47,18 +47,18 @@ packages:
   # for blktrace and seekwatcher
   - blktrace
   - python-numpy
-  - python-matplotlib
+  #- python-matplotlib
   ###
   # for qemu
   - qemu-kvm
-  - usbredir
+  #- usbredir
   - genisoimage
   ###
   # for apache and rgw
   - apache2
   - apache2-devel
   - apache2-utils
-  - apache2-mod_fastcgi
+  #- apache2-mod_fastcgi
   ###
   - libevent-devel
   # for pretty-printing xml
