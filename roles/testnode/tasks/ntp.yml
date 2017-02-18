@@ -24,9 +24,11 @@
     mode: 0644
   notify:
     - restart ntp
+  when: ansible_pkg_mgr != "zypper"
 
 - name: Make sure ntpd is running.
   service:
     name: "{{ntp_service_name}}"
     enabled: yes
     state: started
+  when: ansible_pkg_mgr != "zypper"
