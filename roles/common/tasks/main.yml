@@ -32,6 +32,7 @@
 
 # upload custom disk monitoring scripts
 - include: disk_monitoring.yml
+  when: ansible_pkg_mgr != "zypper"
   tags:
     - monitoring-scripts
     - nagios
