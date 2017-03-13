@@ -167,9 +167,6 @@ Tags
 
 Available tags are listed below:
 
-cpan
-    Install and configure cpan and Amazon::S3.
-
 gpg-keys
     Install gpg keys on Fedora.    
 
